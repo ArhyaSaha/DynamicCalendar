@@ -10,13 +10,7 @@ const Sidebar = () => {
     const { daySelected, hideSidebar, events, setSelectedEvent, setEventModal } = useContext(userContext)
 
     // Filter events for the selected day
-    try {
-        const dayEvents = events.filter(event => new Date(event.day).toDateString() === daySelected.toDateString());
-
-    } catch (error) {
-        console.log(error)
-
-    }
+    const dayEvents = events.filter(event => new Date(event.day).toDateString() === daySelected.toDateString());
 
 
 
