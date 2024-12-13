@@ -60,7 +60,7 @@ const Day = ({ day, currentMonth }) => {
                     <p className={`text-sm p-1 my-1 text-left ${getCurrentDayClass()}`}>
                         {day.getDate()}
                     </p>
-                    <button onClick={(e) => { e.stopPropagation(); setDaySelected(day); setEventModal(true); }} className='hidden group-hover:block hover:scale-125 shadow-2xl rounded-full'>
+                    <button onClick={(e) => { setDaySelected(day); e.stopPropagation(); setEventModal(true); }} className='hidden group-hover:block hover:scale-125 shadow-2xl rounded-full'>
                         <FaPlus />
                     </button>
                 </div>
