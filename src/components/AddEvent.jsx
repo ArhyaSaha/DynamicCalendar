@@ -16,7 +16,7 @@ const labelsClasses = [
 
 const AddEvent = () => {
 
-    const { setEventModal, setDaySelected, daySelected, selectedEvent, events, addEvent, updateEvent } = useContext(userContext)
+    const { setEventModal, setDaySelected, daySelected, selectedEvent, events, addEvent, updateEvent,sidebarVisible } = useContext(userContext)
 
     const [title, setTitle] = useState(
         selectedEvent ? selectedEvent.title : ""
@@ -72,8 +72,12 @@ const AddEvent = () => {
         }
 
         // Close the modal
-        setDaySelected(null);
-        setEventModal(false);
+        if (sidebarVisible) {
+            setEventModal(false);
+        } else {
+            setEventModal(false);
+            setDaySelected(null);
+        }
     }
 
 
