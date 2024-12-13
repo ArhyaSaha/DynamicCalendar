@@ -35,6 +35,14 @@ const AddEvent = () => {
 
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+    function handleClose() {
+        if (sidebarVisible) {
+            setEventModal(false);
+        } else {
+            setEventModal(false);
+            setDaySelected(null);
+        }
+    }
 
     // Function to handle form submission
     function handleSubmit(e) {
@@ -88,7 +96,7 @@ const AddEvent = () => {
                     <span className='text-gray-400'>
                         <MdDragHandle />
                     </span>
-                    <button type='button' onClick={() => { setDaySelected(null); setEventModal(false) }}>
+                    <button type='button' onClick={handleClose}>
                         <span className='text-gray-400 text-3xl'>
                             <IoIosClose />
                         </span>
