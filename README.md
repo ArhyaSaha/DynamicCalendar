@@ -45,6 +45,9 @@ Follow these steps to install and run the application locally:
 - **Add Events**: Click on a day to add an event. Fill in the event details and save.
 - **Edit/Delete Events**: Click on an event to edit or delete it.
 - **View Events**: Click on a day to view the list of events for that day in the side panel.
+- **Drag-and-Drop Events**: Drag and drop events to reschedule them between days.
+- **Export Events**: Export the event list for a specific month as a JSON or CSV file.
+
 
 ## Technologies Used
 
@@ -52,4 +55,4 @@ Follow these steps to install and run the application locally:
 - Tailwind CSS
 - Framer Motion
 - LocalStorage
-
+- shadcn for components
